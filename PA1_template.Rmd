@@ -30,7 +30,6 @@ names(totalStepsByDay) <- c("Date", "Steps")
 ggplot(totalStepsByDay, aes(x = Steps)) +
             geom_histogram(binwidth = 1000)
 ```
-![Steps per day plot](figures/plot1.png)
 
 ### Calculate and report the mean and median of the total number of steps taken per day
 
@@ -42,10 +41,6 @@ stepsMean
 stepsMedian
 ```
 
-Mean of the total number of steps taken per day: 9354.23
-
-Median of the total number of steps taken per day: 10395
-
 ## What is the average daily activity pattern?
 
 ### Make a time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
@@ -56,7 +51,6 @@ names(avgStepsByInterval) <- c("interval", "steps")
 ggplot(avgStepsByInterval, aes(interval,steps)) +  geom_line()
 
 ```
-![Average number of steps per day plot](figures/plot2.png)
 
 ### Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -65,7 +59,6 @@ maxStepsInterval <- avgStepsByInterval[which.max(avgStepsByInterval$steps), c("i
 maxStepsInterval
 ```
 
-5-minute interval that contains max number of steps: 835
 
 ## Imputing missing values
 
@@ -93,7 +86,6 @@ ggplot(newSteps, aes(x = Steps)) +
             geom_histogram(binwidth = 2000)
 
 ```
-![Steps per day plot](figures/plot3.png)
 
 ```{r}
 newStepsMean <- mean(newSteps$Steps)
@@ -124,5 +116,4 @@ ggplot(x, aes(interval, steps)) +
     xlab("Interval") + 
     ylab("Average steps")
 ```
-![Weekdays and weekends plot](figures/plot4.png)
 
