@@ -41,11 +41,10 @@ stepsMedian <- median(totalStepsByDay$Steps)
 stepsMean
 stepsMedian
 ```
-> stepsMean
-[1] 9354.23
 
-> stepsMedian
-[1] 10395
+stepsMean: 9354.23
+
+stepsMedian: 10395
 
 ## What is the average daily activity pattern?
 
@@ -65,8 +64,8 @@ ggplot(avgStepsByInterval, aes(interval,steps)) +  geom_line()
 maxStepsInterval <- avgStepsByInterval[which.max(avgStepsByInterval$steps), c("interval")]
 maxStepsInterval
 ```
-> maxStepsInterval
-[1] 835
+
+maxStepsInterval: 835
 
 ## Imputing missing values
 
@@ -75,8 +74,8 @@ maxStepsInterval
 numNA <- length(which(is.na(activity$steps)))
 numNA
 ```
-> numNA
-[1] 2304
+
+numNA: 2304
 
 ### Create a new dataset that is equal to the original dataset but with the missing data filled in.
 
@@ -102,11 +101,9 @@ newStepsMedian <- median(newSteps$Steps)
 newStepsMean
 newStepsMedian
 ```
-> newStepsMean
-[1] 10766.19
 
-> newStepsMedian
-[1] 10766.19
+newStepsMean: 10766.19
+newStepsMedian: 10766.19
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
