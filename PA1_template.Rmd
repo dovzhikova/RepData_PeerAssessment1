@@ -42,9 +42,9 @@ stepsMean
 stepsMedian
 ```
 
-stepsMean: 9354.23
+Mean of the total number of steps taken per day: 9354.23
 
-stepsMedian: 10395
+Median of the total number of steps taken per day: 10395
 
 ## What is the average daily activity pattern?
 
@@ -65,7 +65,7 @@ maxStepsInterval <- avgStepsByInterval[which.max(avgStepsByInterval$steps), c("i
 maxStepsInterval
 ```
 
-maxStepsInterval: 835
+5-minute interval that contains max number of steps: 835
 
 ## Imputing missing values
 
@@ -75,7 +75,7 @@ numNA <- length(which(is.na(activity$steps)))
 numNA
 ```
 
-numNA: 2304
+Total number of missing values: 2304
 
 ### Create a new dataset that is equal to the original dataset but with the missing data filled in.
 
@@ -102,8 +102,8 @@ newStepsMean
 newStepsMedian
 ```
 
-newStepsMean: 10766.19
-newStepsMedian: 10766.19
+Mean: 10766.19
+Median: 10766.19
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
