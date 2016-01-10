@@ -3,13 +3,13 @@
 library(ggplot2)
 
 ## Loading and preprocessing the data
-
+```{r}
 if(!file.exists('activity.csv')){
     unzip('activity.zip')
 }
 activity <- read.csv('activity.csv')
 activity$date <- as.POSIXct(activity$date) 
-
+```
 
 ## What is mean total number of steps taken per day?
 
